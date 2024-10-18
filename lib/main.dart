@@ -4,8 +4,12 @@ void main() {
   runApp(const MyApp());
 }
 
+void Max(){}
+
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  //hahahahaa
 
   // This widget is the root of your application.
   @override
