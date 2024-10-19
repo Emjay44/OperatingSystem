@@ -4,12 +4,8 @@ void main() {
   runApp(const MyApp());
 }
 
-void Max(){}
-//This is acee
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  //hahahahaa
 
   // This widget is the root of your application.
   @override
@@ -110,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'lol',
+              'You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
