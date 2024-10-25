@@ -1,7 +1,8 @@
 import "package:flutter/material.dart";
 import "package:operatingsystem/Screens/Dashboard.dart";
 
-import class MyApp extends StatelessWidget {
+
+class MyApp extends StatelessWidget {
   const MyApp ({super.key});
 
   @override
