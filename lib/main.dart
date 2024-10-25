@@ -1,34 +1,14 @@
-import 'signup_screen.dart';
-import 'login_screen.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
+import "package:operatingsystem/Screens/Dashboard.dart";
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(MyApp());
-}
+import class MyApp extends StatelessWidget {
+  const MyApp ({super.key});
 
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Auth Demo',
-      home: SignUpScreen(),
-    );
-  }
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Auth Demo',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => SignUpScreen(),
-        '/login': (context) => LoginScreen(),
-      },
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Dashboard(),
     );
   }
 }
