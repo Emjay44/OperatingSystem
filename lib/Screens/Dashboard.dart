@@ -33,11 +33,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: optionStyle,
     ),
     Text(
-      'COURSE PAGE',
+      'EVENTS PAGE',
       style: optionStyle,
     ),
     Text(
-      'CONTACT GFG',
+      'PROFILE PAGE',
       style: optionStyle,
     ),
   ];
@@ -51,10 +51,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('GeeksForGeeks'),
-        backgroundColor: Colors.green,
-      ),
+      
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -66,12 +63,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),
-            label: ('Courses'),
+            label: ('Events'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.contact_mail),
-            label: ('Mail'),
+            icon: Icon(Icons.person),
+            label: ('Profile'),
           ),
+
+
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
