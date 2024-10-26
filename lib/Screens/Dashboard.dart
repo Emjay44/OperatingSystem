@@ -1,79 +1,59 @@
+// lib/Screens/Dashboard.dart
 import 'package:flutter/material.dart';
+import 'package:operatingsystem/Screens/Profile.dart';
+// ignore: duplicate_import
+import 'Profile.dart'; 
 
-void main() => runApp(const Dashboard());
-
-class Dashboard extends StatelessWidget {
-  static const String _title = 'Flutter Code Sample';
-
-  const Dashboard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: _title,
-      home: MyStatefulWidget(),
-    );
-  }
-}
-
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'HOME PAGE',
-      style: optionStyle,
-    ),
-    Text(
-      'EVENTS PAGE',
-      style: optionStyle,
-    ),
-    Text(
-      'PROFILE PAGE',
-      style: optionStyle,
-    ),
+
+  static List<Widget> _pages = <Widget>[
+    Center(child: Text('Home Page')), 
+    Center(child: Text('Events Page')), 
   ];
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    if (index == 2) {
+      
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ProfilePage()),
+      );
+    } else {
+      setState(() {
+        _selectedIndex = index;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: _selectedIndex < _pages.length ? _pages[_selectedIndex] : Container(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: ('Home'),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-            label: ('Events'),
+            icon: Icon(Icons.book),
+            label: 'Events',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: ('Profile'),
+            label: 'Profile',
           ),
-
-
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.blueAccent,
         onTap: _onItemTapped,
       ),
     );
