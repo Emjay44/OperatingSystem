@@ -1,4 +1,4 @@
-// login_page.dart
+
 import 'package:flutter/material.dart';
 import 'Dashboard.dart';
 
@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Implement your log-in logic here, then navigate to Dashboard
+                
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => HomeScreen()),

@@ -1,8 +1,7 @@
-// lib/Screens/Dashboard.dart
+
 import 'package:flutter/material.dart';
 import 'package:operatingsystem/Screens/Profile.dart';
-// ignore: duplicate_import
-import 'Profile.dart'; 
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
