@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "791923247157",
+    "project_id": "ossystem-aa3ce",
+    "storage_bucket": "ossystem-aa3ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791923247157:android:001bd487fafdf32a7e097c",
+        "android_client_info": {
+          "package_name": "com.os.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhuuOicf-_a8RLVke_2_JVx1yMog8ScA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
