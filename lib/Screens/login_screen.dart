@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'Dashboard.dart';
+import 'dashboard.dart';
+import 'admin_dashboard.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -29,7 +29,18 @@ class LoginPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => HomeScreen()),
                 );
               },
-              child: Text('Log In'),
+              child: Text('Log In as User'),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AdminDashboardPage()),
+                );
+              },
+              child: Text('Log In as Admin'),
             ),
           ],
         ),
