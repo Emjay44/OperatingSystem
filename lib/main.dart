@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:operatingsystem/Screens/Dashboard.dart'; 
 import 'package:operatingsystem/Screens/login_screen.dart';
 import 'package:operatingsystem/Screens/signup_screen.dart';
+import 'package:operatingsystem/utils/colors_util.dart';
 
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -25,10 +25,12 @@ class _MyAppState extends State<MyApp> {
 
    
    class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Welcome')),
+      appBar: AppBar(title: const Text('Welcome')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -40,9 +42,9 @@ class _MyAppState extends State<MyApp> {
                   MaterialPageRoute(builder: (context) => LoginPage()),
                 );
               },
-              child: Text('Log In'),
+              child: const Text('Log In'),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -50,7 +52,7 @@ class _MyAppState extends State<MyApp> {
                   MaterialPageRoute(builder: (context) => CreateAccountPage()),
                 );
               },
-              child: Text('Create Account'),
+              child: const Text('Create Account'),
             ),
           ],
         ),

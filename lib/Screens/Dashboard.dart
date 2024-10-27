@@ -4,7 +4,7 @@ import 'package:operatingsystem/Screens/Profile.dart';
 
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -13,9 +13,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  static List<Widget> _pages = <Widget>[
-    Center(child: Text('Home Page')), 
-    Center(child: Text('Events Page')), 
+  static final List<Widget> _pages = <Widget>[
+    const Center(child: Text('Home Page')), 
+    const Center(child: Text('Events Page')), 
   ];
 
   void _onItemTapped(int index) {
