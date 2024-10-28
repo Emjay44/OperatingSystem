@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:operatingsystem/Screens/login_screen.dart';
-//import 'package:operatingsystem/Screens/signup_screen.dart';
+import 'package:operatingsystem/Screens/login_screen.dart';
+import 'package:operatingsystem/Screens/signup_screen.dart';
 //import 'package:operatingsystem/Screens/start_up.dart';
 import 'package:operatingsystem/utils/colors_util.dart';
 class StartUpScreen extends StatefulWidget {
@@ -22,32 +22,32 @@ class _StartUpScreenState extends State<StartUpScreen> {
             hexStringToColor("9546C4"),
             hexStringToColor("FFFFFF")
           ])),
-        // child: Center(
-        //   child: Column(
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: [
-        //       ElevatedButton(
-        //         onPressed: () {
-        //           Navigator.push(
-        //             context,
-        //             MaterialPageRoute(builder: (context) => LoginPage()),
-        //           );
-        //         },
-        //         child: const Text('Log In'),
-        //       ),
-        //       const SizedBox(height: 10),
-        //       ElevatedButton(
-        //         onPressed: () {
-        //           Navigator.push(
-        //             context,
-        //             MaterialPageRoute(builder: (context) => CreateAccountPage()),
-        //           );
-        //         },
-        //         child: const Text('Create Account'),
-        //       ),
-        //     ],
-        //   ),
-        // ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                },
+                child: const Text('Log In'),
+              ),
+              const SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CreateAccountPage()),
+                  );
+                },
+                child: const Text('Create Account'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
